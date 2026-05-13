@@ -6,3 +6,17 @@ Fri May  8 10:07:21 PM UTC 2026:
  tests:  0|6
 ========================================
 36e8bf5
+Wed May 13 11:50:17 PM UTC 2026: 
+ graph.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:32:23: error: implicit declaration of function ‘createMap’; did you mean ‘createGraph’? [-Wimplicit-function-declaration]
+   32 |     g->adjacencyMap = createMap(is_equal_string);
+      |                       ^~~~~~~~~
+      |                       createGraph
+graph.c:32:21: error: assignment to ‘Map *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   32 |     g->adjacencyMap = createMap(is_equal_string);
+      |                     ^
+ee9516a
