@@ -44,7 +44,7 @@ void addNode(Graph* g, const char* label) {
         free(edges);
         return;
     }
-    map_insert(g->adjacencyMap, label, edges);
+    map_insert(g->adjacencyMap, (void*)label, edges);
 
 }
 
