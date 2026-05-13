@@ -25,3 +25,18 @@ Wed May 13 11:51:20 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 b591c3f
+Wed May 13 11:59:22 PM UTC 2026: 
+ graph.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:47:33: error: passing argument 2 of ‘map_insert’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   47 |     map_insert(g->adjacencyMap, label, edges);
+      |                                 ^~~~~
+In file included from graph.c:8:
+map.h:18:33: note: expected ‘void *’ but argument is of type ‘const char *’
+   18 | void map_insert(Map *map, void *key, void *value);
+      |                           ~~~~~~^~~
+cc1: all warnings being treated as errors
+556b149
