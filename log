@@ -75,3 +75,19 @@ Thu May 14 12:57:26 AM UTC 2026:
  1 file changed, 12 insertions(+), 2 deletions(-)
  tests:  0|0
 7043d9e
+Thu May 14 01:17:58 AM UTC 2026: 
+ graph.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:44:8: error: ‘cpylabel’ undeclared (first use in this function); did you mean ‘cpyLabel’?
+   44 |     if(cpylabel == NULL) return;
+      |        ^~~~~~~~
+      |        cpyLabel
+graph.c:44:8: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:43:11: error: unused variable ‘cpyLabel’ [-Werror=unused-variable]
+   43 |     char *cpyLabel = (char*)malloc(strlen(label)+1);
+      |           ^~~~~~~~
+cc1: all warnings being treated as errors
+5e164b8
